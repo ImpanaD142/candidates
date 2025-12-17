@@ -1,0 +1,37 @@
+API Documentation (Included in README)
+1)Get All Candidates
+Endpoint:
+GET /candidates
+Response:
+Returns all available candidates.
+
+2) Shortlist Candidates
+Endpoint:
+POST /shortlist
+Request Body (JSON):
+
+{
+  "skills": ["Python"],
+  "min_experience": 3
+}
+Response:
+
+{
+  "count": 1,
+  "shortlisted_candidates": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "skills": ["Python", "Flask", "SQL"],
+      "experience": 3
+    }
+  ]
+}
+3) How to Run Locally
+pip install -r requirements.txt
+python app.py
+
+
+Server runs at:
+
+http://127.0.0.1:5000
